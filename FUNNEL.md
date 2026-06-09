@@ -58,7 +58,7 @@ After identifying the target database ```secrets```, I connected to the instance
 Final Query:
 ```SELECT * FROM secrets;```
 
-![FUNNEL_secrets_list](Screenshots/FUNNEL_psql_db_list.png)
+![FUNNEL_secrets_list](Screenshots/FUNNEL_secrets_list.png)
 
 Result: 
 Flag: ```cf277664b1771217d7006acdea006db1```
