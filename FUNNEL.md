@@ -1,7 +1,7 @@
 # Hack The Box — [Funnel]
 ## Security Assessment Report
 
-### 📋 Metadata
+### Metadata
 - **Platform:** Hack The Box
 - **Lab Type:** [Starting Point]
 - **Operating System:** [Linux]
