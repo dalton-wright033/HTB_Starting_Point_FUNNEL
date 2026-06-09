@@ -29,7 +29,7 @@ Using the default password and the list of usernames identified from the contact
 
 ## 3. Internal Enumeration & Pivoting
 ### 3.1 Service Identification
-Once a shell was established, internal enumeration was performed to identify services not exposed to the external network. Using the ss -tln command, I discovered a service listening on 127.0.0.1:5432. 
+Once a shell was established, internal enumeration was performed to identify services not exposed to the external network. Using the ```ss -tln``` command, I discovered a service listening on 127.0.0.1:5432. 
 
 *   Observation: The service was bound only to the loopback interface, meaning it was inaccessible from the attack box despite the port being open.
 
@@ -48,7 +48,7 @@ The tunnel was verified as operational using nc -zv localhost 8432, confirming a
 
 ### 4.2 Database Enumeration
 Using the psql client on the attack box, I connected to the tunnel to list the available databases:
-psql -h localhost -p 8432 -l
+```psql -h localhost -p 8432 -l```
 
 ### 4.3 Flag Retrieval
 After identifying the target database [Insert DB Name], I connected to the instance and enumerated the tables using the \dt command. A table named [Insert Table Name] was identified as containing the flag.
@@ -57,4 +57,4 @@ Final Query:
 ```SELECT * FROM [table_name];```
 
 Result: 
-Flag: cf277664b1771217d7006acdea006db1
+Flag: ```cf277664b1771217d7006acdea006db1```
