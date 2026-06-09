@@ -50,11 +50,17 @@ The tunnel was verified as operational using nc -zv localhost 8432, confirming a
 Using the psql client on the attack box, I connected to the tunnel to list the available databases:
 ```psql -h localhost -p 8432 -l```
 
+![FUNNEL_pqsl_db](Screenshots/FUNNEL_psql_db_list.png)
+
 ### 4.3 Flag Retrieval
 After identifying the target database [Insert DB Name], I connected to the instance and enumerated the tables using the \dt command. A table named [Insert Table Name] was identified as containing the flag.
 
 Final Query:
-```SELECT * FROM [table_name];```
+```SELECT * FROM [secrets];```
+
+![FUNNEL_secrets_list](Screenshots/FUNNEL_psql_db_list.png)
 
 Result: 
 Flag: ```cf277664b1771217d7006acdea006db1```
+
+![FUNNEL_flag](Screenshots/FUNNEL_flag.png)
