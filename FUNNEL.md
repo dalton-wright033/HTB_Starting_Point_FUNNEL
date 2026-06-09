@@ -47,7 +47,7 @@ I mapped local port 8432 (to avoid a collision with a local Postgres installatio
 The tunnel was verified as operational using nc -zv localhost 8432, confirming a successful TCP handshake.
 
 ### 4.2 Database Enumeration
-Using the psql client on the attack box, I connected to the tunnel to list the available databases:
+Using the psql client on the attack box, I connected to the tunnel using the compromised user credentials to list the available databases:
 ```psql -h localhost -p 8432 -U christine -l```
 
 ![FUNNEL_pqsl_db](Screenshots/FUNNEL_psql_db_list.png)
