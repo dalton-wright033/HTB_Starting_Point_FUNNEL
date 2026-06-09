@@ -48,7 +48,7 @@ The tunnel was verified as operational using nc -zv localhost 8432, confirming a
 
 ### 4.2 Database Enumeration
 Using the psql client on the attack box, I connected to the tunnel to list the available databases:
-```psql -h localhost -p 8432 -l```
+```psql -h localhost -p 8432 -U christine -l```
 
 ![FUNNEL_pqsl_db](Screenshots/FUNNEL_psql_db_list.png)
 
